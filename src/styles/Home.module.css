@@ -1,5 +1,11 @@
 .container {
-  /* max-width: 36rem; */
-  /* padding: 10rem; */
-  margin: auto;
+  padding: 5rem 15rem;
+}
+
+.sectionName {
+  padding: 3rem 0;
+}
+
+.postList {
+  padding: 2rem 0;
 }
