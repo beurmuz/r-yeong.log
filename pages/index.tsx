@@ -2,10 +2,18 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "../src/styles/Home.module.css";
+import { GetStaticProps } from "next";
+import { getSortedPostsData } from "../lib/post";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const Home: ({ allPostData }: {
+  allPostData: {
+    date: string,
+    title: string,
+    id: Number
+  }[]
+}) => {
   return (
     <>
       <div className={styles.container}>
@@ -24,7 +32,10 @@ export default function Home() {
         </header>
         <section>
           <h2 className={styles.sectionName}>Posts</h2>
-          <ul className={styles.postList}></ul>
+          <ul className={styles.postList}>
+            {allPostsData.map(data = data.id+)};
+
+          </ul>
         </section>
         <footer>
           <p>ⓒ 2023 beurmuz. All rights reserved.</p>
@@ -32,4 +43,14 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+export default Home;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const allPostData = getSortedPostsData();
+  return {
+    props: {
+      allPostData,
+    },
+  };
+};
