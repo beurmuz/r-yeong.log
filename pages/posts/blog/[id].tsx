@@ -32,6 +32,9 @@ const Post = ({
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </article>
+      <footer>
+        <p>ⓒ 2023 beurmuz. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
@@ -48,7 +51,7 @@ export const getStaticPaths: GetStaticPaths = async ({}) => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const postData = await getPostData(params.id as string);
+  const postData = await getPostData(params?.id as string);
   return {
     props: {
       postData,

@@ -39,6 +39,9 @@ const Home = ({
           ))}
         </ul>
       </section>
+      <footer>
+        <p>ⓒ 2023 beurmuz. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
