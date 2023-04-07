@@ -27,9 +27,15 @@ const Home = ({
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <section>
-        <Link href={`/`}>
-          <h2 className={styles.sectionName}>Blog</h2>
-        </Link>
+        {/* <Link href={`/`}> */}
+        <h2 className={styles.sectionName}>Blog</h2>
+        {/* </Link> */}
+        <div>
+          현재 blog를 개발중입니다. 모든 글은 제
+          <a href='https://github.com/beurmuz/TIS'>Github</a>에 올린 글과,
+          기존에 운영하던 Velog에 올린 내용들을 기반으로 업로드할 예정입니다.
+          (2023.04.07)
+        </div>
         <ul className={styles.postList}>
           {allPostsData.map(({ id, title, date }) => (
             <li className={styles.postItem} key={id}>
