@@ -18,16 +18,18 @@ const Home = ({
   return (
     <div className={styles.container}>
       <Head>
-        <title>ryeong-devlog</title>
+        <title>r-yeong.log</title>
         <meta
           name='description'
-          content='Frontend 개발자, ryeong의 기술 블로그입니다.'
+          content='Frontend 개발자, beurmuz의 (기술) 블로그입니다.'
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <section>
-        <h2 className={styles.sectionName}>Blog</h2>
+        <Link href={`/`}>
+          <h2 className={styles.sectionName}>Blog</h2>
+        </Link>
         <ul className={styles.postList}>
           {allPostsData.map(({ id, title, date }) => (
             <li className={styles.postItem} key={id}>
