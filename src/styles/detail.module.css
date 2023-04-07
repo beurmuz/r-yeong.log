@@ -1,0 +1,16 @@
+.container {
+  padding: 10rem 15rem;
+}
+
+.titleName {
+  padding-bottom: 1rem;
+}
+
+.dateStyle {
+  color: #a5a5a5;
+}
+
+.contentBox {
+  padding: 3rem 0rem;
+  line-height: 1.8;
+}
