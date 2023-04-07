@@ -1,6 +1,6 @@
 ---
 title: "[CS]그래프 탐색 - BFS와 DFS"
-date: "2023-04.03"
+date: "2023-04-03"
 ---
 
 ✅ DFS, BFS는 [그래프](../DataStructure/graph.md)에 대해 선행지식이 필요합니다.
