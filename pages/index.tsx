@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "../src/styles/Home.module.css";
 import { GetStaticProps } from "next";
 import { getSortedPostsData } from "../lib/post";
+import Link from "next/link";
 
 const Home = ({
   allPostsData,
@@ -30,9 +31,9 @@ const Home = ({
         <ul className={styles.postList}>
           {allPostsData.map(({ id, title, date }) => (
             <li className={styles.postItem} key={id}>
-              {/* <Link href={`/posts/${id}`}> */}
-              <a>{title}</a>
-              {/* </Link> */}
+              <Link href={`/posts/blog/${id}`}>
+                <span className={styles.postLink}>{title}</span>
+              </Link>
               <small className={styles.date}>{date}</small>
             </li>
           ))}
